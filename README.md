@@ -15,7 +15,7 @@ _Inspired by the amazing work from Sparkfun, Adafruit, GBATEK, makho, JRodrigo, 
   - Enables potential for a Pokéwalker-like mod for BW/BW2!
   - **OROM** = IR, **MROM** = Wi-Fi & SLOT2 peripheral
 
-- Independently powered SLOT2 "magic box"
+- Independently powered SLOT2 peripheral
   - Likely Sparkfun ESP8266 + IR TX/RX board + 64KiB FRAM.
   - GBA-compliant form factor and FRAM read/write pins
     - In a sense, more of a "GBA lookalike" than an actual cart
