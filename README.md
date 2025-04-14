@@ -1,9 +1,15 @@
 # pokétrotter
 A modern take on the [Pokéwalker](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9walker) as an overambitious and overextended amateur embedded/hacking project.
 
+_Inspired by the amazing work from Sparkfun, Adafruit, GBATEK, makho, JRodrigo, and Arduino among many many others!_<br><br>
+
 ![pokewalker promo banner](https://github.com/user-attachments/assets/9ca4a41e-3c97-4b78-a153-1fbf118176b6)
 
+<br>
+
 > Presently (optimistically!!) planned is as follows. The aim is for no hardware modification, minimal implementation cost (both monetary and utility), and simple constructive usage. If the project ends up unflatteringly eviscerated, at least I will have learned a bit of hardware design (ᵕ—ᴗ—)
+
+<br>
 
 - SLOT1 = either **original ROM HGSS (OROM)** or **modified ROM flashcart (MROM)**.
   - Enables potential for a Pokéwalker-like mod for BW/BW2!
@@ -54,6 +60,62 @@ A modern take on the [Pokéwalker](https://bulbapedia.bulbagarden.net/wiki/Pok%C
   - Desktop/mobile emulators (OpenEmu, Delta, Lemuroid...)
     - Trivial given already making MROMs. Modern and mobile!!
 
-> To the reader, please accept this malformed diagram at your convenience and leisure.
+<br><br>
+> To the reader, a mildly useful diagram for your convenience.
+<br>
 
+```
+                                                                           IR TX/RX                                                                 
+                                                                        ┌──────────────┐                                                            
+                                                                        │              │                                                            
+                                                                        │          ┌──+++─────────────────┐                                         
+                                                                        │          │  +++                 │                                         
+              @@@                                                       │          │                      │                                         
+            @@@        ┌──────┌─────────────────────┐───────┐           │          %% Link Cable          │                                         
+           @@     @@   │      │  Pokémon HGSS OROM  │       │           │     ┌────%%  (EXT)              │          ┌#─#─#─#─#─#─#─#─┐             
+           @     @@   @@@     │    or BW/BW2 MROM   │       │           │     │    │                      │          │                │             
+Nintendo   @     @    @│@     │   SLOT1 cartridge   │       │           │     │    │                      │          ┌──────────────────┐      Bosch BMA150 etc.     
+  "WFC"    @     @    @│@     └─────────────────────┘       │           │     │    │                      │          │────────────────┘ │     ┌────┐
+           @     @@   @@@                                   │           │     │    │┌─##################─┐│  ◄─────  │  MPC3000 v4      │ ◄── │    │
+           @@     @@   │        NINTENDO DS LITE            │           │     │    ││ ################## ││          │                  │     └────┘
+            @@@        │                                    │           │     │    ││                    ││  ◄─────  │      or          │           
+              @        │                                    │           │     │    ││                    ││          │                  │           
+                       │                                    │           │     │    ││   GAME   BOY       ││          │  MPC7 donor/emu  │           
+                       │                                    │           │     │    ││                    ││          │                  │           
+                       │                                    │           │     │    ││      COLO(U)R      ││          │                  │           
+                       │                                    │           │     │    ││                    ││          └──────────────────┘           
+                       └────── ##################### ───────┘           │     │    ││                    ││                                         
+                                    ▲        ▲                          │     │    ││                    ││                                         
+                        @           │        │                          │     │    │└────────────────────┘│                                         
+                      @@            │        │                          │     │    │                      │                                         
+                     @   @    ┌─────┴────────┴──────┐                   │     │    └──────────────────────┘                                         
+           802.11b   @  @  @  │ ESP8266 + IR TX/RX  │ ◄─────────────────┘     │                                                                     
+             WLAN    @  @  @  │   SLOT2 peripheral  │                         │                                                                     
+                     @   @    ┴───────────────────┬─                          │                                                                     
+                      @@                     ▲    │                           │                                                                     
+                        @                    │    │                           │                                                                     
+                                             │    │               @@          │                                                                     
+                                             │    │              @            ▼                                                                     
+                                             │    │             @   @  ┌──────────────────────┐                                                     
+                                             │    │            @@  @  @│    Pi/Arduino/etc    │                                                     
+                                             │    │            @   @  @│  external comms      │                                                     
+                                             │    │            @@   @  └──────────────────────┘                                                     
+                             ┌─*****──┐      │    │             @@                                                                                  
+                             │        │      │    │              @@                                                                                 
+                             │ Pebble │      │    │                                                                                                 
+                             │   or   ├──────┘    │                                                                                                 
+                             │ Core   │           │                                                                                                 
+                             │  Time  │           │                                                                                                 
+                             │        │           │                                                                                                 
+                             └─*****──┘           │                                                                                                 
+                                                  │                                                                                                 
+                                                  ▼                                                                                                 
+                                          ┌────────────┐                                                                                            
+                                          │            │                                                                                            
+                                          │ whatever   │                                                                                            
+                                          │            │                                                                                            
+                                          │   u want!  │                                                                                            
+                                          │            │                                                                                            
+                                          └────────────┘          
+```                                          
 _...feasibility is a problem for tomorrow. Surely nothing will go wrong ~! •ᴗ•_
