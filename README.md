@@ -1,13 +1,13 @@
 # pokétrotter
 A modern take on the [Pokéwalker](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9walker) as an overambitious and overextended amateur embedded/hacking project.
 
-_Inspired by the amazing work from Sparkfun, Adafruit, GBATEK, makho, JRodrigo, and Arduino among many many others!_<br><br>
+_Inspired by the amazing work from Sparkfun, Adafruit, GBATEK, makho, JRodrigo, and Arduino among many many others ♥_<br><br>
 
 ![pokewalker promo banner](https://github.com/user-attachments/assets/9ca4a41e-3c97-4b78-a153-1fbf118176b6)
 
 <br>
 
-> Presently (optimistically!!) planned is as follows. The aim is for no hardware modification, minimal implementation cost (both monetary and utility), and simple constructive usage. If the project ends up unflatteringly eviscerated, at least I will have learned a bit of hardware design (ᵕ—ᴗ—)
+> Presently (optimistically!) planned is as follows. The aim is for no OEM hardware modification, minimal implementation cost (both monetary and utility), and simple constructive usage. If the project unflatteringly crumbles, at least I will have learned a tad of hardware design (ᵕ—ᴗ—)
 
 <br>
 
